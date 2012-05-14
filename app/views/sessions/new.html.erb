@@ -1,0 +1,39 @@
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+<center>
+
+<%= form_tag sessions_path do %>
+
+
+  <% if @sessions && @sessions.errors.any? %>
+
+    <div class="error_messages">
+      <h2><%= pluralize(@sessions.errors.count, "error") %> prohibited this account from being saved:</h2>
+      <ul>
+      <% @sessions.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+	<%= text_field_tag(:email, @session.try(:email), :placeholder => "email", :class => "field") %>
+  </p>
+  <p>
+    <%= password_field_tag(:password, @session.try(:password), :placeholder => "password", :class => "field") %>
+  </p>
+  <p class="button"><%= submit_tag "Log in" %></p>
+<% end %>
+
+
+
+<%= button_to "or -> Create an account", sign_up_path, :method => "get" %>
+
+</center>

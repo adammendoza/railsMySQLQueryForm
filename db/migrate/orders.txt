@@ -1,0 +1,26 @@
+
+
+:order_id, :customer_id, :first_name, :last_name, :email_address, :shipping_address_id, :payment_method_id, :total_amount, :tax_amount, :gift_card_amount, :shipping_amount, :handling_amount, :order_date, :submitted_date, :status, :created_by, :created_date, :modified_by, :modified_date, :is_deleted)
+
+1|1|Adam|Mendoza|
+
+ "order_id", :force => true do |t|
+    t.integer  "customer_id",                                                                                 :null => false
+    t.string   "first_name",          :limit => 32
+    t.string   "last_name",           :limit => 32
+    t.string   "email_address",       :limit => 96,                               :default => "",             :null => false
+    t.integer  "shipping_address_id"
+    t.integer  "payment_method_id"
+    t.decimal  "total_amount",                      :precision => 8, :scale => 2, :default => 0.0,            :null => false
+    t.decimal  "tax_amount",                        :precision => 8, :scale => 2, :default => 0.0,            :null => false
+    t.decimal  "gift_card_amount",                  :precision => 8, :scale => 2
+    t.decimal  "shipping_amount",                   :precision => 8, :scale => 2
+    t.decimal  "handling_amount",                   :precision => 8, :scale => 2
+    t.datetime "order_date",                                                                                  :null => false
+    t.datetime "submitted_date"
+    t.string   "status",              :limit => 16,                               :default => "AUTH_PENDING", :null => false
+    t.integer  "created_by",                                                      :default => 0,              :null => false
+    t.datetime "created_date",                                                                                :null => false
+    t.integer  "modified_by",                                                     :default => 0,              :null => false
+    t.datetime "modified_date",                                                                               :null => false
+    t.boolean  "is_deleted",                                                      :default => false,          :null => false

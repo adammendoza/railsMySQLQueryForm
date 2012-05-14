@@ -1,0 +1,52 @@
+<%= form_for @user do |f| %>
+
+  <br/>
+  <br/>
+  <br/>
+
+
+<center>
+
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Correct Erors and try again</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+</center>
+ 
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+<center>
+
+<table border="0" bordercolor=transparent" style="background-color:transparent" width="200">
+  <tr>
+    <td>
+          <%= f.text_field :email, :placeholder => "email address", :class => "field"  %>
+          <%= f.password_field :password, :placeholder => "password", :class => "field" %>
+          <%= f.password_field :password_confirmation, :placeholder => "confirm password", :class => "field" %>
+    </td>
+  </tr>
+</table>
+
+  <p ><%= f.submit %></p>
+
+<% end %>
+
+or
+
+<%= button_to "Log in", log_in_path, :method => "get" %>
+
+
+</center>
