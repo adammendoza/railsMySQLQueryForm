@@ -56,5 +56,5 @@ production:
   password: 84c9d724
 #  socket: /tmp/mysql.sock
   timeout: 5000
-#  host: localhost
+  host: us-cdbr-east.cleardb.com
 
