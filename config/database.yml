@@ -29,7 +29,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: onekingDEV
+  database: onekingdev
   username: onekingDBAdmin
   password: CloudKingLjFh
   socket: /tmp/mysql.sock
@@ -40,7 +40,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: onekingTEST
+  database: onekingtest
   username: onekingDBAdmin
   password: CloudKingLjFh
   socket: /tmp/mysql.sock
@@ -54,7 +54,7 @@ production:
   database: heroku_82ba9dc2a94ece2
   username: a48fffeeb684f6
   password: 84c9d724
-#  socket: /tmp/mysql.sock
+  socket: /tmp/mysql.sock
   timeout: 5000
   host: us-cdbr-east.cleardb.com
 

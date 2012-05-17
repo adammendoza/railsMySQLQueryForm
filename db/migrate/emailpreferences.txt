@@ -1,1 +1,3 @@
-:customer_id, :subscribes_to_daily_emails, :subscribes_to_special_promos, :subscribes_to_weekly_calendar, :created_by, :created_date, :modified_by, :modified_date, :is_deleted
+1|true|true|true|0|"2012-01-01"|0|"2012-01-01"|false
+2|false|false|true|0|"2011-03-10"|0|"2011-03-10"|false
+3|true|true|true|0|"2012-04-10"|0|"2012-04-10"|true
