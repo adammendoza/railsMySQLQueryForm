@@ -1,0 +1,48 @@
+<h2>Query orders</h2>
+
+<%= form_for @query do |f| %>
+  <div class="fieldQuery">
+    <%= f.label :customer_first_name, "First Name" %> 
+    <%= f.text_field :customer_first_name %>
+  </div>  
+  <div class="fieldQuery">
+    <%= f.label :customer_last_name, "Last Name" %>
+    <%= f.text_field :customer_last_name %>
+  </div>  
+  <div class="fieldQuery">
+    <%= f.label :customer_email, "Email" %>
+    <%= f.text_field :customer_email  %>
+  </div>  
+  <div class="fieldQuery">
+    <%= f.label :postal_code, "Postal Code" %>
+    <%= f.text_field :postal_code  %>
+  </div>  
+  <div class="fieldQuery">
+    <%= f.label :order_id, "Order ID" %>
+    <%= f.text_field :order_id  %>
+  </div>   
+  <div class="fieldRange">
+    <%= f.label :order_min_date, "Date Range" %>
+    <%= f.text_field :order_min_date, size: 12  %> -
+    <%= f.text_field :order_max_date, size: 12  %>
+  </div>
+  <div class="fieldRange">
+    <%= f.label :min_total_amount, "Amount Range" %>
+    <%= f.text_field :min_total_amount, size: 12 %> -
+    <%= f.text_field :max_total_amount, size: 12 %>
+  </div>
+  <div class="fieldQuery">
+    <%= f.label :order_is_deleted , "Deleted" %>
+    <%= f.select :order_is_deleted, {" " => nil, "Yes" => true, "No" => false}%>
+  </div>  
+  <div class="fieldQuery">
+    <%= f.label :subscribes_to_daily_emails , "Daily Emails Subs" %>
+    <%= f.select :subscribes_to_daily_emails, {" " => nil, "Yes" => true, "No" => false}%>
+  </div>  
+  <div class="fieldQuery">
+    <%= f.label :results_limit , "Max Results" %>
+    <%= f.text_field :results_limit, size:12 %>
+  </div>  
+
+  <div class="actions"><%= f.submit "Query" %></div>
+ <% end %>

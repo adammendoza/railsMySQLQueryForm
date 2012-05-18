@@ -1,3 +1,4 @@
 11|Adam|Mendoza|1 USA St|APT 456|94608|Emeryville|510-585-6662|0|"2012-01-01"|0|"2012-01-01"
 12|Gina|Fox|45 USA St|APT 6|94607|San Francisco|415-867-5309|0|"2011-03-10"|0|"2011-03-10"
-13|Kent|Derb|89 North House| |34607|Las Angeles|910-265-6452|0|"2012-04-10"|0|"2012-04-10"
+13|Kent|Derb|89 North House| |34607|Los Angeles|910-265-6452|0|"2012-04-10"|0|"2012-04-10"
+14|Scam|Foobar|1 Bad St| |99999| Bad City|999-265-6452|0|"2012-05-10"|0|"2012-05-10"

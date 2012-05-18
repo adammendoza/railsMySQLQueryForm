@@ -79,5 +79,23 @@ class CreateDatabase < ActiveRecord::Migration
     t.datetime "updated_at",    :null => false
   end
 
+
+  create_table "queries", :force => true do |t|
+    t.string "customer_email"
+    t.string "customer_first_name"
+    t.string "customer_last_name"
+    t.decimal "max_total_amount"
+    t.decimal "min_total_amount"
+    t.integer "order_id"
+    t.boolean "order_is_deleted"
+    t.datetime "order_max_date"
+    t.datetime "order_min_date"
+    t.integer "results_limit"
+    t.string "postal_code"
+    t.boolean "subscribes_to_daily_emails"
+
+    t.timestamps
+  end
+
  end 
 end

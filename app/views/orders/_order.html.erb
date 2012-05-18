@@ -1,0 +1,22 @@
+<tr>
+	<td width="10"><%= link_to order.order_id, order %></td>
+	<td width="10">Customer ID</td>
+	<td width="10"><%= order.first_name %></td>
+	<td width="10"><%= order.last_name %></td>
+	<td width="10"><%= order.email_address %></td>
+	<td width="10"><%= order.shipping_address_id %></td>
+	<td width="10"><%= order.payment_method_id %></td>
+	<td width="10"><%= number_to_currency(order.total_amount) %></td>
+	<td width="10"><%= number_to_currency(order.tax_amount) %></td>
+	<td width="10"><%= number_to_currency(order.gift_card_amount) %></td>
+	<td width="10"><%= number_to_currency(order.shipping_amount) %></td>
+	<td width="10"><%= number_to_currency(order.handling_amount) %></td>
+	<td width="10"><%= order.order_date %></td>
+	<td width="10"><%= order.submitted_date %></td>
+	<td width="10"><%= order.status %></td>
+	<td width="10"><%= order.created_by %></td>
+	<td width="10"><%= order.created_date %></td>
+	<td width="10"><%= order.modified_by %></td>
+	<td width="10"><%= order.modified_date %></td>
+	<td width="10"><%= order.is_deleted %></td>
+</tr>

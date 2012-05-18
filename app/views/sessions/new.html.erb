@@ -21,7 +21,9 @@
       <% end %>
       </ul>
     </div>
+
   <% end %>
+
 
   <p>
 	<%= text_field_tag(:email, @session.try(:email), :placeholder => "email", :class => "field") %>
@@ -33,7 +35,9 @@
 <% end %>
 
 
+<p class="button">
+  <%= button_to "or -> Create an account", sign_up_path, :method => "get" %>
+</p>
 
-<%= button_to "or -> Create an account", sign_up_path, :method => "get" %>
 
 </center>

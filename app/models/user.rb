@@ -1,7 +1,3 @@
-#class User < ActiveRecord::Base
-#  attr_accessible :email, :password_hash, :password_salt
-#end
-
 class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation
   

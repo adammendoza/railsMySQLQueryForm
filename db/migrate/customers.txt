@@ -1,3 +1,4 @@
 1|Adam|Mendoza|adammendoza@hotmail.com|94608|koolcat4|ACTIVE|"2012-01-01"|0|"2012-01-01"|0|"2012-01-01"|false
 2|Gina|Fox|ginafox@gmail.com|94607|ginaCGD|ACTIVE|"2011-03-10"|0|"2011-03-10"|0|"2011-03-10"|false
 3|Kent|Derb|boogs@gmail.com|34607|wertd|ACTIVE|"2012-04-10"|0|"2012-04-10"|0|"2012-04-10"|false
+4|Scam|Foobar|foo@gmail.com|99999|frsge|ACTIVE|"2012-05-10"|0|"2015-04-10"|0|"2015-04-10"|false

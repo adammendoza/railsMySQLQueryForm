@@ -1,19 +1,19 @@
 Oneking::Application.routes.draw do
 
-#root :to => "users#new"
-
 root :to => "sessions#new"
 
 resources :users
 resources :sessions
-resources :query
+resources :queries
+resources :orders
 
 get "sessions/new"
 get "users/new"
 get "log_out" => "sessions#destroy", :as => "log_out"
 get "log_in" => "sessions#new", :as => "log_in"
 get "sign_up" => "users#new", :as => "sign_up"
-get "query_page" => "queries#query", :as => "query_page"
+get "query_page" => "queries#new", :as => "query_page"
+get "orders/index"
 
 #root :to => 'welcome#index'
 

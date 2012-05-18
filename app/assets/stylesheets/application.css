@@ -28,6 +28,9 @@ a {
   color: #0000FF;
 }
 
+table {
+  font-size:20px;
+}
 .clear {
   clear: both;
   height: 0;
@@ -93,9 +96,10 @@ a {
   margin: 8px 10px;
 }
 
-form .field, form .actions {
+form .field, .fieldQuery, .fieldRange, form .actions {
   margin: 12px 0;
 }
+
 .field {
         border:0px solid #333333;
         border-radius:10px;
@@ -121,9 +125,66 @@ form .field, form .actions {
 
 }
 
+.fieldQuery {
+        border:0px solid #333333;
+        border-radius:10px;
+        width:450px;
+        height:40px;
+        background: #ffffff;
+        background: rgb(255,255,255); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 26%, rgba(225,225,225,1) 69%, rgba(246,246,246,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(26%,rgba(241,241,241,1)), color-stop(69%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 26%,rgba(225,225,225,1) 69%,rgba(246,246,246,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 26%,rgba(225,225,225,1) 69%,rgba(246,246,246,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 26%,rgba(225,225,225,1) 69%,rgba(246,246,246,1) 100%); /* IE10+ */
+        background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 26%,rgba(225,225,225,1) 69%,rgba(246,246,246,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+        text-align: left;
+        font: 100% Myriad;
+        font-style: italic;
+         -moz-box-shadow: 3px 3px 5px #404040;
+        -webkit-box-shadow: 3px 3px 5px #404040;
+        box-shadow: 3px 3px 5px #404040; /* For IE 8 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#404040')";/* For IE 5.5 - 7 */
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#404040');
+
+}
+
+form .fieldRange {
+        border:0px solid #333333;
+        border-radius:10px;
+        width:450px;
+        height:40px;
+        background: #ffffff;
+        background: rgb(255,255,255); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 26%, rgba(225,225,225,1) 69%, rgba(246,246,246,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(26%,rgba(241,241,241,1)), color-stop(69%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 26%,rgba(225,225,225,1) 69%,rgba(246,246,246,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 26%,rgba(225,225,225,1) 69%,rgba(246,246,246,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 26%,rgba(225,225,225,1) 69%,rgba(246,246,246,1) 100%); /* IE10+ */
+        background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 26%,rgba(225,225,225,1) 69%,rgba(246,246,246,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+        text-align: left;
+        font: 100% Myriad;
+        font-style: italic;
+         -moz-box-shadow: 3px 3px 5px #404040;
+        -webkit-box-shadow: 3px 3px 5px #404040;
+        box-shadow: 3px 3px 5px #404040; /* For IE 8 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#404040')";/* For IE 5.5 - 7 */
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#404040');
+
+}
+
 .field:focus {font-style: normal;}
 
-.submit { font-size: 25px;}
+.submit { font-size: 50px;}
+
+.actions{
+        width:200px;
+        height:40px;
+        font-size: 50px;
+}
+
 
 #inputbox {
         border:0px solid #333333;

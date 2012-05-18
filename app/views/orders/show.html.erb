@@ -1,0 +1,50 @@
+<h2>Orders</h2>
+
+<!-- Add this later
+<%= form_tag orders_path, method: :get do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= button_tag "Query by order Id", order_id: nil %>
+  </p>
+<% end %>
+-->
+
+
+
+<!-- 
+Make a better form for single order. 
+-->
+
+
+
+<p><%= link_to "Back to Query Form", new_query_path %></p>
+
+<div id="orders">
+<table border="1" bordercolor="#003366" style="background-color:#006699" width="100%" cellpadding="3" cellspacing="3">
+	<tr>
+		<td width="5">Order ID</td>
+		<td width="10">Customer ID</td>
+		<td width="10">First Name</td>
+		<td width="10">Last Name</td>
+		<td width="10">Email Address</td>
+		<td width="10">Shipping Address ID</td>		
+		<td width="10">Payment Method ID</td>
+		<td width="10">Total Amount</td>
+		<td width="10">Tax Amount</td>		
+		<td width="10">GC Amount</td>		
+		<td width="10">Ship Amount</td>		
+		<td width="10">Hndl. Amount</td>		
+		<td width="10">Order Date</td>		
+		<td width="10">Submitted Date</td>		
+		<td width="10">Status</td>		
+		<td width="10">Created By</td>		
+		<td width="10">Created Date</td>
+		<td width="10">Modified By</td>
+		<td width="10">Modified Date</td>
+		<td width="10">Deleted</td>
+	</tr>
+
+  <%= render @orders %>
+
+  </table>
+</div>

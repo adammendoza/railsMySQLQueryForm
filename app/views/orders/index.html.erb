@@ -1,0 +1,14 @@
+<h2>Orders</h2>
+
+<%= form_tag orders_path, method: :get do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= button_tag "Query by order Id", order_id: nil %>
+  </p>
+<% end %>
+
+<p><%= link_to "Back to Query", new_query_path %></p>
+
+<div id="orders">
+  <%= render @orders %>
+</div>
