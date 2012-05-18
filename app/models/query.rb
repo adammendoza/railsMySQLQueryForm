@@ -40,19 +40,21 @@ if order_is_deleted.nil? == false
   end
 end
 
+#Added orders explicitly because otherwise first_name, etc is ambiguous 
+#since it is in multiple models.
 
     orders = Order.order(:order_id)
-    orders = orders.joins("INNER JOIN customers ON customers.customer_id = orders.customer_id AND customers.postal_code LIKE ", "'%#{postal_code}%'") if postal_code.present?
-    orders = orders.joins("INNER JOIN email_preferences ON email_preferences.customer_id = orders.customer_id AND email_preferences.subscribes_to_daily_emails = ", "#{@subscribes_to_daily_emailsVar}") if !@subscribes_to_daily_emailsVar.nil?
-    orders = orders.where("first_name LIKE ?", "%#{customer_first_name}%") if customer_first_name.present?
-    orders = orders.where("last_name LIKE ?", "%#{customer_last_name}%") if customer_last_name.present?    
-    orders = orders.where("email_address LIKE ?", "%#{customer_email}%") if customer_email.present?        
-    orders = orders.where("order_id like ?", "%#{order_id}%") if order_id.present?
-    orders = orders.where("is_deleted = ?", "#{@order_is_deletedVar}") if !@order_is_deletedVar.nil?
+    orders = orders.where("orders.first_name LIKE ?", "%#{customer_first_name}%") if customer_first_name.present?
+    orders = orders.where("orders.last_name LIKE ?", "%#{customer_last_name}%") if customer_last_name.present?    
+    orders = orders.where("orders.email_address LIKE ?", "%#{customer_email}%") if customer_email.present?        
+    orders = orders.where("orders.order_id like ?", "%#{order_id}%") if order_id.present?
+    orders = orders.where("orders.is_deleted = ?", "#{@order_is_deletedVar}") if !@order_is_deletedVar.nil?
     orders = orders.where("total_amount >= ?", min_total_amount) if min_total_amount.present?
     orders = orders.where("total_amount <= ?", max_total_amount) if max_total_amount.present?
     orders = orders.where("order_date >= ?", order_min_date) if order_min_date.present?
     orders = orders.where("order_date <= ?", order_max_date) if order_max_date.present?
+    orders = orders.joins("INNER JOIN customers ON customers.customer_id = orders.customer_id AND customers.postal_code LIKE ", "'%#{postal_code}%'") if postal_code.present?
+    orders = orders.joins("INNER JOIN email_preferences ON email_preferences.customer_id = orders.customer_id AND email_preferences.subscribes_to_daily_emails = ", "#{@subscribes_to_daily_emailsVar}") if !@subscribes_to_daily_emailsVar.nil?  
     orders = orders.limit(results_limit) if results_limit.present?   
     orders
   end

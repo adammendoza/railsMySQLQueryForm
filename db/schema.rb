@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120517102821) do
+ActiveRecord::Schema.define(:version => 20120514033723) do
 
   create_table "addresses", :primary_key => "address_id", :force => true do |t|
     t.string   "first_name",    :limit => 32,  :default => "", :null => false
@@ -84,17 +84,20 @@ ActiveRecord::Schema.define(:version => 20120517102821) do
   add_index "orders", ["shipping_address_id"], :name => "idx_shipping_address_id"
 
   create_table "queries", :force => true do |t|
+    t.string   "customer_email"
     t.string   "customer_first_name"
     t.string   "customer_last_name"
-    t.string   "customer_email"
+    t.decimal  "max_total_amount",           :precision => 10, :scale => 0
+    t.decimal  "min_total_amount",           :precision => 10, :scale => 0
     t.integer  "order_id"
-    t.datetime "order_min_date"
-    t.datetime "order_max_date"
     t.boolean  "order_is_deleted"
-    t.decimal  "min_total_amount",    :precision => 10, :scale => 0
-    t.decimal  "max_total_amount",    :precision => 10, :scale => 0
-    t.datetime "created_at",                                         :null => false
-    t.datetime "updated_at",                                         :null => false
+    t.datetime "order_max_date"
+    t.datetime "order_min_date"
+    t.integer  "results_limit"
+    t.string   "postal_code"
+    t.boolean  "subscribes_to_daily_emails"
+    t.datetime "created_at",                                                :null => false
+    t.datetime "updated_at",                                                :null => false
   end
 
   create_table "users", :force => true do |t|
