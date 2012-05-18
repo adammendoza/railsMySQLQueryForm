@@ -14,10 +14,13 @@ end
 private
   def find_orders
 
+@results_limitVar = nil
 
-   if results_limit.nil? == true
-    results_limit = 50
-   end
+if results_limit.nil? == true
+    @results_limitVar = 50
+else
+    @results_limitVar = results_limit    
+end
    
 @subscribes_to_daily_emailsVar = nil
 
@@ -55,7 +58,7 @@ end
     orders = orders.where("order_date <= ?", order_max_date) if order_max_date.present?
     orders = orders.joins("INNER JOIN customers ON customers.customer_id = orders.customer_id AND customers.postal_code LIKE ", "'%#{postal_code}%'") if postal_code.present?
     orders = orders.joins("INNER JOIN email_preferences ON email_preferences.customer_id = orders.customer_id AND email_preferences.subscribes_to_daily_emails = ", "#{@subscribes_to_daily_emailsVar}") if !@subscribes_to_daily_emailsVar.nil?  
-    orders = orders.limit(results_limit) if results_limit.present?   
+    orders = orders.limit(@results_limitVar) if !@results_limitVar.nil? 
     orders
   end
 
